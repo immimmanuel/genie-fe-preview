@@ -8,7 +8,8 @@ export default defineConfig({
             preserveSymlinks: true,
         },
     build: {
-        outDir: "../backend/static",
+        // outDir: "../backend/static",
+        outDir: 'dist',
         emptyOutDir: true,
         sourcemap: true,
         rollupOptions: {
