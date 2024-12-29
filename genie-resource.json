@@ -1,0 +1,200 @@
+{
+    "apiVersion": "2024-10-01",
+    "id": "/subscriptions/087376fb-15e6-4f0f-b39f-009a2f987064/resourceGroups/genie/providers/Microsoft.CognitiveServices/accounts/gencapita-genie",
+    "name": "gencapita-genie",
+    "type": "microsoft.cognitiveservices/accounts",
+    "sku": {
+        "name": "S0"
+    },
+    "kind": "OpenAI",
+    "location": "eastus",
+    "tags": {},
+    "properties": {
+        "endpoint": "https://gencapita-genie.openai.azure.com/",
+        "internalId": "b06a356e0efb4244b44587dad2562e81",
+        "dateCreated": "2024-12-25T13:53:16.3475663Z",
+        "apiProperties": {},
+        "callRateLimit": {
+            "rules": [
+                {
+                    "key": "openai.dalle.post",
+                    "renewalPeriod": 1,
+                    "count": 30,
+                    "matchPatterns": [
+                        {
+                            "path": "dalle/*",
+                            "method": "POST"
+                        },
+                        {
+                            "path": "openai/images/*",
+                            "method": "POST"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.dalle.other",
+                    "renewalPeriod": 1,
+                    "count": 30,
+                    "matchPatterns": [
+                        {
+                            "path": "dalle/*",
+                            "method": "*"
+                        },
+                        {
+                            "path": "openai/operations/images/*",
+                            "method": "*"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.assistants.default",
+                    "renewalPeriod": 1,
+                    "count": 100,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/assistants/*",
+                            "method": "*"
+                        },
+                        {
+                            "path": "openai/threads/*",
+                            "method": "*"
+                        },
+                        {
+                            "path": "openai/vector_stores/*",
+                            "method": "*"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.batches.post",
+                    "renewalPeriod": 60,
+                    "count": 30,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/batches/*",
+                            "method": "POST"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.batches.get",
+                    "renewalPeriod": 60,
+                    "count": 500,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/batches/*",
+                            "method": "GET"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai.batches.list",
+                    "renewalPeriod": 60,
+                    "count": 100,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/batches",
+                            "method": "GET"
+                        }
+                    ]
+                },
+                {
+                    "key": "openai",
+                    "renewalPeriod": 1,
+                    "count": 30,
+                    "matchPatterns": [
+                        {
+                            "path": "openai/*",
+                            "method": "*"
+                        }
+                    ]
+                },
+                {
+                    "key": "default",
+                    "renewalPeriod": 1,
+                    "count": 30,
+                    "matchPatterns": [
+                        {
+                            "path": "*",
+                            "method": "*"
+                        }
+                    ]
+                }
+            ]
+        },
+        "isMigrated": false,
+        "customSubDomainName": "gencapita-genie",
+        "networkAcls": {
+            "defaultAction": "Allow",
+            "virtualNetworkRules": [],
+            "ipRules": []
+        },
+        "privateEndpointConnections": [],
+        "publicNetworkAccess": "Enabled",
+        "capabilities": [
+            {
+                "name": "VirtualNetworks"
+            },
+            {
+                "name": "CustomerManagedKey"
+            },
+            {
+                "name": "MaxFineTuneCount",
+                "value": "100"
+            },
+            {
+                "name": "MaxRunningFineTuneCount",
+                "value": "3"
+            },
+            {
+                "name": "MaxUserFileCount",
+                "value": "50"
+            },
+            {
+                "name": "MaxTrainingFileSize",
+                "value": "512000000"
+            },
+            {
+                "name": "MaxUserFileImportDurationInHours",
+                "value": "1"
+            },
+            {
+                "name": "MaxFineTuneJobDurationInHours",
+                "value": "720"
+            },
+            {
+                "name": "MaxEvaluationRunDurationInHours",
+                "value": "5"
+            },
+            {
+                "name": "MaxRunningEvaluationCount",
+                "value": "5"
+            },
+            {
+                "name": "TrustedServices",
+                "value": "Microsoft.CognitiveServices,Microsoft.MachineLearningServices,Microsoft.Search,Microsoft.VideoIndexer"
+            },
+            {
+                "name": "RaiMonitor"
+            }
+        ],
+        "endpoints": {
+            "OpenAI Language Model Instance API": "https://gencapita-genie.openai.azure.com/",
+            "OpenAI Dall-E API": "https://gencapita-genie.openai.azure.com/",
+            "OpenAI Whisper API": "https://gencapita-genie.openai.azure.com/",
+            "OpenAI Model Scaleset API": "https://gencapita-genie.openai.azure.com/",
+            "OpenAI Realtime API": "https://gencapita-genie.openai.azure.com/",
+            "Token Service API": "https://gencapita-genie.openai.azure.com/"
+        },
+        "provisioningState": "Succeeded"
+    },
+    "systemData": {
+        "createdBy": "io@gencapita.com",
+        "createdByType": "User",
+        "createdAt": "2024-12-25T13:53:15.2694158Z",
+        "lastModifiedBy": "io@gencapita.com",
+        "lastModifiedByType": "User",
+        "lastModifiedAt": "2024-12-25T13:53:15.2694158Z"
+    },
+    "etag": "\"31041834-0000-0100-0000-676c0e620000\""
+}
