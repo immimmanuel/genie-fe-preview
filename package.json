@@ -8,8 +8,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc vite build",
-    "preview": "vite preview"
+    "buildVite": "tsc vite build",
+    "preview": "vite preview",
+    "build": "tsc && npm run vite-build",
+    "vite-build": "vite build"
   },
   "dependencies": {
     "@azure/msal-react": "^2.0.6",
