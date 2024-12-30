@@ -1,4 +1,8 @@
-## Local Development
+## Swagger Doc
+http://127.0.0.1:8000/docs
+
+## azure backennd url
+https://genie-web-amcphefcf5hta5cp.canadacentral-01.azurewebsites.net/
 
 ## Staging Url
 https://genie-ai-dev-cgcycshbdyh9hbcc.eastus-01.azurewebsites.net
